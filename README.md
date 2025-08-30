@@ -1,46 +1,126 @@
-# Getting Started with Create React App
+# Helpdesk Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern React-based frontend for a helpdesk application with authentication system and dashboard functionality.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **Authentication System**: Sign In, Sign Up, Forgot Password, and Verify Account pages
+- **Modern UI**: Built with Ant Design components and custom styling
+- **Responsive Design**: Optimized for desktop and tablet viewing
+- **State Management**: React Context for authentication state
+- **TypeScript**: Full type safety throughout the application
 
-### `npm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **React 18** with TypeScript
+- **Ant Design** for UI components
+- **React Router DOM** for routing
+- **Lato Font** for typography
+- **CSS-in-JS** for styling
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 📁 Project Structure
 
-### `npm test`
+```
+src/
+├── components/
+│   ├── auth/
+│   │   ├── AuthLayout.tsx        # Two-column layout for auth pages
+│   │   └── SignInForm.tsx        # Sign-in form component
+│   ├── ui/
+│   │   ├── Button.tsx            # Custom styled button component
+│   │   └── Input.tsx             # Custom styled input component
+│   └── layout/
+│       └── Logo.tsx              # We Win logo component
+├── pages/
+│   └── auth/
+│       └── AuthPage.tsx          # Main auth page with state switching
+├── types/
+│   └── auth.ts                   # TypeScript type definitions
+└── assets/
+    └── styles/
+        └── globals.css           # Global styles and fonts
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🎨 Design System
 
-### `npm run build`
+### Colors
+- **Primary**: #4D2EED (Purple)
+- **Secondary**: #1D115A (Dark Purple)
+- **Text Primary**: #0C1421 (Dark)
+- **Text Secondary**: #8897AD (Grey)
+- **Background**: #FFF (White)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Typography
+- **Font Family**: Lato
+- **Weights**: 300, 400, 500, 600, 700, 800
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
 
-### `npm run eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Clone the repository:
+```bash
+git clone https://github.com/noOobaf/Helpdesk-Frontend.git
+cd Helpdesk-Frontend
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Install dependencies:
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3. Start the development server:
+```bash
+npm start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Learn More
+### Available Scripts
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `npm start` - Runs the app in development mode
+- `npm run build` - Builds the app for production
+- `npm test` - Launches the test runner
+- `npm run eject` - Ejects from Create React App
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📱 Current Pages
+
+### Authentication Pages
+- **Sign In** (Default) - Email/password login with Google OAuth option
+- **Sign Up** - User registration (Coming Soon)
+- **Forgot Password** - Password recovery (Coming Soon)
+- **Verify Account** - Email verification (Coming Soon)
+
+## 🔧 Development
+
+### Adding New Components
+1. Create component in appropriate directory under `src/components/`
+2. Use TypeScript interfaces for props
+3. Follow the existing styling patterns
+4. Add to exports if needed
+
+### Styling Guidelines
+- Use inline styles for component-specific styling
+- Follow the established color palette
+- Maintain consistent spacing (8px, 12px, 16px, 24px, 40px)
+- Use Lato font family throughout
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 👨‍💻 Author
+
+**noOobaf** - [GitHub Profile](https://github.com/noOobaf)
+
+## 🤝 Contributing
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
