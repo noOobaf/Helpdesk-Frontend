@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import AuthLayout from '../../components/auth/AuthLayout';
 import SignInForm from '../../components/auth/SignInForm';
+import SignUpForm from '../../components/auth/SignUpForm';
+import VerifyAccountForm from '../../components/auth/VerifyAccountForm';
+import ForgotPasswordForm from '../../components/auth/ForgotPasswordForm';
 import { AuthView } from '../../types/auth';
 
 const AuthPage: React.FC = () => {
@@ -10,8 +13,16 @@ const AuthPage: React.FC = () => {
     setCurrentView('signup');
   };
 
+  const handleSignIn = () => {
+    setCurrentView('signin');
+  };
+
   const handleForgotPassword = () => {
     setCurrentView('forgot-password');
+  };
+
+  const handleVerifyAccount = () => {
+    setCurrentView('verify');
   };
 
   const handleBackToSignIn = () => {
@@ -29,27 +40,22 @@ const AuthPage: React.FC = () => {
         );
       case 'signup':
         return (
-          <div style={{ textAlign: 'center', color: '#8897AD' }}>
-            <h2>Sign Up Form</h2>
-            <p>Coming soon...</p>
-            <button onClick={handleBackToSignIn}>Back to Sign In</button>
-          </div>
-        );
-      case 'forgot-password':
-        return (
-          <div style={{ textAlign: 'center', color: '#8897AD' }}>
-            <h2>Forgot Password</h2>
-            <p>Coming soon...</p>
-            <button onClick={handleBackToSignIn}>Back to Sign In</button>
-          </div>
+          <SignUpForm
+            onSignIn={handleSignIn}
+            onVerifyAccount={handleVerifyAccount}
+          />
         );
       case 'verify':
         return (
-          <div style={{ textAlign: 'center', color: '#8897AD' }}>
-            <h2>Verify Account</h2>
-            <p>Coming soon...</p>
-            <button onClick={handleBackToSignIn}>Back to Sign In</button>
-          </div>
+          <VerifyAccountForm
+            onSignUp={handleSignUp}
+          />
+        );
+      case 'forgot-password':
+        return (
+          <ForgotPasswordForm
+            onBackToSignIn={handleBackToSignIn}
+          />
         );
       default:
         return <SignInForm onSignUp={handleSignUp} onForgotPassword={handleForgotPassword} />;
