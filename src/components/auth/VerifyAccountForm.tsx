@@ -156,3 +156,4 @@ const VerifyAccountForm: React.FC<VerifyAccountFormProps> = ({ onSignUp }) => {
 };
 
 export default VerifyAccountForm;
+
