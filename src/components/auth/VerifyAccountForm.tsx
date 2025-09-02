@@ -1,28 +1,22 @@
 import React, { useState } from 'react';
-import { Form, Typography, Divider } from 'antd';
+import { Form, Typography } from 'antd';
 import Button from '../ui/Button';
 import Input from '../ui/Input';
 
 const { Title, Text } = Typography;
 
-interface SignInFormProps {
+interface VerifyAccountFormProps {
   onSignUp: () => void;
-  onForgotPassword: () => void;
 }
 
-const SignInForm: React.FC<SignInFormProps> = ({ onSignUp, onForgotPassword }) => {
+const VerifyAccountForm: React.FC<VerifyAccountFormProps> = ({ onSignUp }) => {
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (values: any) => {
     setLoading(true);
-    // TODO: Implement sign in logic
-    console.log('Sign in:', values);
+    // TODO: Implement verify account logic
+    console.log('Verify account:', values);
     setTimeout(() => setLoading(false), 1000);
-  };
-
-  const handleGoogleSignIn = () => {
-    // TODO: Implement Google sign in
-    console.log('Google sign in');
   };
 
   return (
@@ -41,7 +35,7 @@ const SignInForm: React.FC<SignInFormProps> = ({ onSignUp, onForgotPassword }) =
             letterSpacing: '0.36px'
           }}
         >
-          Sign In
+          Verify Account
         </Title>
         <Text style={{
           display: 'block',
@@ -51,40 +45,11 @@ const SignInForm: React.FC<SignInFormProps> = ({ onSignUp, onForgotPassword }) =
           fontSize: '16px',
           fontWeight: 400
         }}>
-          Enter your email and password to sign in!
+          Enter your e-mail address and mobile below to verify your account.
         </Text>
       </div>
 
-      {/* Google Sign In Button */}
-      <Button 
-        variant="secondary" 
-        size="large"
-        onClick={handleGoogleSignIn}
-        style={{
-          width: '100%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: '8px',
-          marginBottom: '50px',
-          background: '#F7FBFF',
-          border: '1px solid #D4D7E3'
-        }}
-      >
-        <img 
-          src="/Google.svg" 
-          alt="Google" 
-          style={{ width: '20px', height: '20px' }} 
-        />
-        Sign in with Google
-      </Button>
-
-      {/* Divider */}
-      <Divider style={{ margin: '0 0 50px 0' }} plain>
-        <Text style={{ color: '#8897AD', fontSize: '14px' }}>Or</Text>
-      </Divider>
-
-      {/* Sign In Form */}
+      {/* Verify Account Form */}
       <Form
         layout="vertical"
         onFinish={handleSubmit}
@@ -123,44 +88,20 @@ const SignInForm: React.FC<SignInFormProps> = ({ onSignUp, onForgotPassword }) =
               fontSize: '14px',
               fontWeight: 500
             }}>
-              Password
+              Mobile Phone
             </Text>
           }
-          name="password"
+          name="mobilePhone"
           rules={[
-            { required: true, message: 'Please enter your password' },
-            { min: 8, message: 'Password must be at least 8 characters' }
+            { required: true, message: 'Please enter your mobile phone' }
           ]}
           style={{ marginBottom: '24px' }}
         >
-          <Input.Password 
-            placeholder="at least 8 characters"
+          <Input 
+            placeholder="94000 12345"
             size="large"
-            style={{
-              background: '#F7FBFF',
-              border: '1px solid #D4D7E3'
-            }}
           />
         </Form.Item>
-
-        {/* Forgot Password Link - Right Aligned */}
-        <div style={{ 
-          textAlign: 'right', 
-          marginBottom: '24px'
-        }}>
-          <Text
-            onClick={onForgotPassword}
-            style={{
-              color: '#4D2EED',
-              fontFamily: 'Lato',
-              fontSize: '14px',
-              cursor: 'pointer',
-              fontWeight: 500
-            }}
-          >
-            Forgot Password?
-          </Text>
-        </div>
 
         <Form.Item style={{ marginBottom: '24px' }}>
           <Button 
@@ -170,12 +111,12 @@ const SignInForm: React.FC<SignInFormProps> = ({ onSignUp, onForgotPassword }) =
             loading={loading}
             style={{ width: '100%' }}
           >
-            Sign in
+            Submit
           </Button>
         </Form.Item>
       </Form>
 
-      {/* Sign Up Link - Left Aligned with Sign In Button */}
+      {/* Sign Up Link */}
       <div style={{ textAlign: 'left', marginTop: '24px' }}>
         <Text style={{
           color: '#0C1421',
@@ -196,7 +137,7 @@ const SignInForm: React.FC<SignInFormProps> = ({ onSignUp, onForgotPassword }) =
         </Text>
       </div>
 
-      {/* Copyright - Moved Further Down */}
+      {/* Copyright */}
       <div style={{
         textAlign: 'center',
         marginTop: '60px',
@@ -214,4 +155,6 @@ const SignInForm: React.FC<SignInFormProps> = ({ onSignUp, onForgotPassword }) =
   );
 };
 
-export default SignInForm;
+export default VerifyAccountForm;
+
+
