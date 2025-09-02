@@ -16,7 +16,7 @@ import {
 import type { MenuProps as AntMenuProps } from "antd";
 import CreateTicketModal from "./CreateTicketModal";
 import { AddStatusModal, AddSubDispositionModal } from "./StatusModals";
-import { Ticket } from "../pages/auth/AuthPage"; // Adjust path if needed
+import { Ticket } from "../pages/auth/Dashboard"; // Adjust path if needed
 
 const { Option } = Select;
 

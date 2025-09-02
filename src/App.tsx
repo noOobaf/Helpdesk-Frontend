@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Dashboard from './pages/auth/AuthPage';
+import Dashboard from './pages/auth/Dashboard';
 import AccountInformationDashboard from './components/accounttable'
 import DispositionSubdispositionTable from './components/disposition'
 import SubdispositionTable  from './components/subdisposition'

@@ -10,7 +10,7 @@ import {
 } from "antd";
 import type { ColumnsType } from "antd/lib/table";
 import { EyeOutlined } from "@ant-design/icons";
-import { Ticket } from "../pages/auth/AuthPage"; // Assuming Dashboard.tsx is in pages
+import { Ticket } from "../pages/auth/Dashboard"; // Assuming Dashboard.tsx is in pages
 
 const { Search } = Input;
 const { Text } = Typography;
