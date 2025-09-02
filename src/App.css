@@ -35,4 +35,107 @@
   to {
     transform: rotate(360deg);
   }
+}/* WeWin Sidebar Styles - Add this to your App.css or sidebar.css */
+
+/* WeWin Sidebar Styles - Add this to your App.css or sidebar.css */
+
+/* Sider trigger (collapse button) styling */
+.ant-layout-sider-trigger {
+  background: #1a0f3d !important;
+  border-top: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+/* Menu background */
+.ant-menu-dark, 
+.ant-menu-dark .ant-menu-sub, 
+.ant-menu-dark .ant-menu-submenu-popup {
+  background-color: transparent !important;
+}
+
+/* Menu items styling */
+.ant-menu-dark .ant-menu-item {
+  color: rgba(255,255,255,0.85) !important;
+  margin: 2px 8px !important;
+  border-radius: 6px !important;
+  height: 40px !important;
+  line-height: 40px !important;
+  transition: all 0.2s ease !important;
+}
+
+.ant-menu-dark .ant-menu-item:hover {
+  background-color: rgba(255,255,255,0.1) !important;
+  color: white !important;
+}
+
+.ant-menu-dark .ant-menu-item-selected {
+  background-color: #6366f1 !important;
+  color: white !important;
+  font-weight: 500 !important;
+}
+
+/* Submenu title styling */
+.ant-menu-dark .ant-menu-submenu-title {
+  color: rgba(255,255,255,0.85) !important;
+  margin: 2px 8px !important;
+  border-radius: 6px !important;
+  height: 40px !important;
+  line-height: 40px !important;
+  transition: all 0.2s ease !important;
+}
+
+.ant-menu-dark .ant-menu-submenu-title:hover {
+  background-color: rgba(255,255,255,0.1) !important;
+  color: white !important;
+}
+
+.ant-menu-dark .ant-menu-submenu-open > .ant-menu-submenu-title {
+  background-color: rgba(255,255,255,0.1) !important;
+  color: white !important;
+}
+
+/* FIXED: Submenu arrow styling for proper direction */
+.ant-menu-dark .ant-menu-submenu-arrow {
+  color: rgba(255,255,255,0.6) !important;
+}
+
+/* When sidebar is expanded (inline mode) */
+.ant-layout-sider:not(.ant-layout-sider-collapsed) .ant-menu-inline .ant-menu-submenu-title .ant-menu-submenu-arrow {
+  transform: rotate(0deg) !important;
+  transition: transform 0.2s ease !important;
+}
+
+.ant-layout-sider:not(.ant-layout-sider-collapsed) .ant-menu-inline .ant-menu-submenu-open > .ant-menu-submenu-title .ant-menu-submenu-arrow {
+  transform: rotate(90deg) !important;
+}
+
+/* When sidebar is collapsed - show right arrows */
+.ant-layout-sider.ant-layout-sider-collapsed .ant-menu-submenu-title .ant-menu-submenu-arrow {
+  transform: rotate(0deg) !important;
+  display: inline-block !important;
+}
+
+/* Group title styling */
+.ant-menu-dark .ant-menu-item-group-title {
+  color: #a0a0ff !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+
+/* Submenu items styling */
+.ant-menu-dark .ant-menu-sub {
+  background-color: rgba(0,0,0,0.2) !important;
+}
+
+.ant-menu-dark .ant-menu-sub .ant-menu-item {
+  padding-left: 48px !important;
+  font-size: 13px !important;
+}
+
+/* Ensure sidebar is positioned correctly */
+.ant-layout-sider {
+  position: fixed !important;
+  height: 100vh !important;
+  left: 0 !important;
+  top: 0 !important;
+  z-index: 100 !important;
 }
