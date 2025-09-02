@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Layout,
   Input,
@@ -15,7 +16,7 @@ import {
 
 const { Header: AntHeader } = Layout;
 const { Search } = Input;
-const { Title, Text } = Typography;
+const { Text } = Typography;
 
 interface WeWinHeaderProps {
   // Add any props you need here
@@ -33,6 +34,7 @@ const WeWinHeader: React.FC<WeWinHeaderProps> = ({
   onUserMenuClick,
   sidebarCollapsed = false
 }) => {
+  const navigate = useNavigate();
   // User dropdown menu
   const userMenuItems: MenuProps["items"] = [
     { key: "profile", label: "Profile" },
@@ -43,6 +45,9 @@ const WeWinHeader: React.FC<WeWinHeaderProps> = ({
   const handleMenuClick = ({ key }: { key: string }) => {
     if (onUserMenuClick) {
       onUserMenuClick(key);
+    }
+    if (key === "logout") {
+      navigate("/");
     }
   };
 

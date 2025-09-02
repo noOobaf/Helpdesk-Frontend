@@ -2,11 +2,7 @@ import React, { useState } from "react";
 // CHANGED: Import useNavigate for routing
 import { useNavigate } from "react-router-dom";
 import { Layout, Card, Button, Space, Typography, Row, Col } from "antd";
-import {
-  SettingOutlined,
-  ApartmentOutlined,
-  SwapOutlined,
-} from "@ant-design/icons";
+// Removed unused Ant Design icon imports
 
 // Import components (you'll need to adjust paths based on your project structure)
 import WeWinSidebar from "./sidebar";

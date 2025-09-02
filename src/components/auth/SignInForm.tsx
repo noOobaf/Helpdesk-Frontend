@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Form, Typography, Divider } from 'antd';
 import Button from '../ui/Button';
 import Input from '../ui/Input';
@@ -12,12 +13,18 @@ interface SignInFormProps {
 
 const SignInForm: React.FC<SignInFormProps> = ({ onSignUp, onForgotPassword }) => {
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = async (values: any) => {
     setLoading(true);
-    // TODO: Implement sign in logic
-    console.log('Sign in:', values);
-    setTimeout(() => setLoading(false), 1000);
+    // MOCK: accept any non-empty email/password and "navigate" to dashboard
+    const isValid = Boolean(values?.email) && Boolean(values?.password);
+    setTimeout(() => {
+      setLoading(false);
+      if (isValid) {
+        navigate('/dashboard');
+      }
+    }, 600);
   };
 
   const handleGoogleSignIn = () => {

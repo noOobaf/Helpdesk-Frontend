@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Form, Typography, Checkbox } from 'antd';
 import Button from '../ui/Button';
 import Input from '../ui/Input';
@@ -12,12 +13,18 @@ interface SignUpFormProps {
 
 const SignUpForm: React.FC<SignUpFormProps> = ({ onSignIn, onVerifyAccount }) => {
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = async (values: any) => {
     setLoading(true);
-    // TODO: Implement sign up logic
-    console.log('Sign up:', values);
-    setTimeout(() => setLoading(false), 1000);
+    // MOCK: accept minimal fields then go to sign in
+    const isValid = Boolean(values?.firstName) && Boolean(values?.email);
+    setTimeout(() => {
+      setLoading(false);
+      if (isValid) {
+        navigate('/');
+      }
+    }, 800);
   };
 
   return (

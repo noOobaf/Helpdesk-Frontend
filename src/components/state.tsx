@@ -14,14 +14,7 @@ import {
   Dropdown,
 } from "antd";
 import type { ColumnsType } from "antd/lib/table";
-import {
-  EditOutlined,
-  DeleteOutlined,
-  ReloadOutlined,
-  FilterOutlined,
-  SettingOutlined,
-  MoreOutlined,
-} from "@ant-design/icons";
+// Removed unused Ant Design icon imports
 
 // Import components (you'll need to adjust paths based on your project structure)
 import WeWinSidebar from "./sidebar";
@@ -109,7 +102,7 @@ const StateInformationDashboard: React.FC = () => {
       title: (
         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
           Country Name
-          <img src="/tablesort.svg" />
+          <img src="/tablesort.svg" alt="sort" />
         </div>
       ),
       dataIndex: "countryName",
@@ -120,7 +113,7 @@ const StateInformationDashboard: React.FC = () => {
       title: (
         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
           State Name
-          <img src="/tablesort.svg" />
+          <img src="/tablesort.svg" alt="sort" />
         </div>
       ),
       dataIndex: "stateName",
@@ -131,7 +124,7 @@ const StateInformationDashboard: React.FC = () => {
       title: (
         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
           Description
-          <img src="/tablesort.svg" />
+          <img src="/tablesort.svg" alt="sort" />
         </div>
       ),
       dataIndex: "description",

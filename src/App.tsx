@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Dashboard from './pages/auth/Dashboard';
-import AuthPage from './pages/auth/Authpage'
+import AuthPage from './pages/auth/AuthPage'
 import AccountInformationDashboard from './components/accounttable'
 import DispositionSubdispositionTable from './components/disposition'
 import SubdispositionTable  from './components/subdisposition'
@@ -20,7 +20,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<AuthPage />} />
-          <Route path="/auth" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/master/account-info" element={<AccountInformationDashboard />} />
           <Route path="/disposition" element={<DispositionSubdispositionTable />} />
           <Route path="/subdispositions" element={<SubdispositionTable />} />

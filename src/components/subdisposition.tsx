@@ -16,14 +16,7 @@ import {
 } from "antd";
 import type { ColumnsType } from "antd/lib/table";
 import type { MenuProps } from "antd";
-import {
-  EditOutlined,
-  DeleteOutlined,
-  ReloadOutlined,
-  FilterOutlined,
-  SettingOutlined,
-  MoreOutlined,
-} from "@ant-design/icons";
+// Removed unused Ant Design icon imports
 
 // Import components (you'll need to adjust paths based on your project structure)
 import WeWinSidebar from "./sidebar";

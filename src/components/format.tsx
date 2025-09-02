@@ -12,13 +12,7 @@ import {
   Select,
 } from "antd";
 import type { ColumnsType } from "antd/lib/table";
-import {
-  EditOutlined,
-  DeleteOutlined,
-  PlusOutlined,
-  ReloadOutlined,
-  FilterOutlined,
-} from "@ant-design/icons";
+// Removed unused Ant Design icon imports
 
 const { Search } = Input;
 const { Text } = Typography;
@@ -156,7 +150,7 @@ const tableColumns: ColumnsType<PriorityMapping> = [
     dataIndex: "ticketType",
     key: "ticketType",
     width: 120,
-    filterIcon: <img src="/tablesort.svg" />,
+    filterIcon: <img src="/tablesort.svg" alt="sort" />,
     filterDropdown: () => (
       <div style={{ padding: "8px" }}>Filter content here</div>
     ),
@@ -166,7 +160,7 @@ const tableColumns: ColumnsType<PriorityMapping> = [
     dataIndex: "dispositionName",
     key: "dispositionName",
     width: 150,
-    filterIcon: <img src="/tablesort.svg" />,
+    filterIcon: <img src="/tablesort.svg" alt="sort" />,
     filterDropdown: () => (
       <div style={{ padding: "8px" }}>Filter content here</div>
     ),
@@ -176,7 +170,7 @@ const tableColumns: ColumnsType<PriorityMapping> = [
     dataIndex: "subDispositionName",
     key: "subDispositionName",
     width: 170,
-    filterIcon: <img src="/tablesort.svg" />,
+    filterIcon: <img src="/tablesort.svg" alt="sort" />,
     filterDropdown: () => (
       <div style={{ padding: "8px" }}>Filter content here</div>
     ),
@@ -186,7 +180,7 @@ const tableColumns: ColumnsType<PriorityMapping> = [
     dataIndex: "priority",
     key: "priority",
     width: 120,
-    filterIcon: <img src="/tablesort.svg" />,
+    filterIcon: <img src="/tablesort.svg" alt="sort" />,
     filterDropdown: () => (
       <div style={{ padding: "8px" }}>Filter content here</div>
     ),
@@ -211,13 +205,13 @@ const tableColumns: ColumnsType<PriorityMapping> = [
       <Space size="small">
         <Button
           type="text"
-          icon={<img src="/edit.svg" alt="Mapped" />}
+          icon={<img src="/edit.svg" alt="edit" />}
           size="small"
           onClick={() => console.log("Edit priority mapping:", record.key)}
         />
         <Button
           type="text"
-          icon={<img src="/delete.svg" alt="Mapped" />}
+          icon={<img src="/delete.svg" alt="delete" />}
           size="small"
           onClick={() => console.log("Delete priority mapping:", record.key)}
         />
